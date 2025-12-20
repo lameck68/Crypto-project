@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="crypto-head">
+    <h3>CRYPTO ANALYSIS</h3>
+</div><br>
+{% if not cryptos %}
+
+{% else %}
+<div class="crypto-analysis">
+{% for cryptos in cryptos %}
+<div><h3>{{ cryptos.analysis }}</h3>
+    <iframe src="https://s.tradingviews.com/widgetembed/?symbol={{ cryptos.symbol}}USD&interval=60&theme=dark" frameborder="0" style="height: fit-content;">
+    </iframe><br>
+</div>
+{% endfor %}
+</div>
+
+<br><br>
+
+{% endif %}
+<div class="View">
+    <a href="{% url 'crypto_news' %}"><button>View Crypto News</button></a> 
+</div><br>
+{% endblock %}

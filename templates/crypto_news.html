@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="crypto-head">
+    <h3>CRYPTO NEWS</h3>
+</div><br>
+<div class="crypto-news">
+    {% for news in news %}
+    <div>
+        <div>
+          <a href="{{ news.url }}"><h3>{{ news.title }}</h3></a>
+        </div>
+        <p>{{ news.source_name }} | <span> {{ news.created_at }} </span></p>   
+        <br>
+    </div>
+    {% empty %}
+    <p>No crypto news available</p>
+    {% endfor %}
+    <br>
+</div><br>
+{% endblock %}

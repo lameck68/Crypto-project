@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="crypto-head">
+    <h3>ABOUT US</h3>
+</div><br>
+<div class="about-us"><br>
+{% if not about %}
+{% else %}
+{% for about in about %}
+<p>{{ about.discription }}</p>
+{% endfor %}
+{% endif %}
+<br>
+<div>
+    <form method="post" >
+    {% csrf_token %}
+    <h2>contact us</h2>
+    <label for="">your name:</label><br>
+    <input type="text" name="name"><br><br>
+    <textarea name="ideas" id="" cols="30" rows="10"></textarea><br><br>
+    <button type="submit">SEND</button><br>
+   </form>
+</div>
+</div><br>
+{% endblock %}

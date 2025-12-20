@@ -1,0 +1,55 @@
+{% load static %}
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MASTERCRYPTO</title>
+    <link rel="stylesheet" href="{% static 'style/style.css' %}">
+    <link rel="icon" href="{% static 'img/logo.png' %}">
+    <link rel="stylesheet" href="{% static 'style/response.css' %}">
+    <script src="{% static 'js/jquery.js' %}"></script>
+    <script>
+        $(Document).ready(function(){
+            $(".small-screen").hide();
+            $(".menu-icon").click(function(){
+                $(".small-screen").slideDown();
+                
+            });
+            $(".close").click(function(){
+                $(".small-screen").slideUp();
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="small-screen">
+        <img src="{% static 'img/close.png' %}" alt="" class="close">
+        <ul>
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li><a href="{% url 'cryptos' %}">Cryptos</a></li>
+            <li><a href="{% url 'analysis' %}">Analysis</a></li>
+            <li><a href="{% url 'crypto_news' %}">Crypto news</a></li>
+            <li><a href="{% url 'about_us' %}">About us</a></li>
+        </ul> 
+    </div>
+    <div class="menu">
+        <img src="{% static 'img/logo.png' %}">
+        <img src="{% static 'img/menu.png' %}" alt="" class="menu-icon">
+        <ul>
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li><a href="{% url 'cryptos' %}">Cryptos</a></li>
+            <li><a href="{% url 'analysis' %}">Analysis</a></li>
+            <li><a href="{% url 'crypto_news' %}">Crypto news</a></li>
+            <li><a href="{% url 'about_us' %}">About us</a></li>
+        </ul> 
+    </div>
+   <div class="content"><br>
+       {% block content %}
+       
+       {% endblock %}
+   </div>
+   <div class="footer"><br>
+   <div><label>&copy; 2025 MASTERCRYPTO RESERVED</label></div> 
+    
+   </div>
+</body>
+</html>

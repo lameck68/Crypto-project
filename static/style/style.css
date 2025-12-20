@@ -1,0 +1,298 @@
+body{
+    margin: -1px;
+    width: 100%;
+    background-color: black;
+    justify-items: inherit;
+}
+.menu{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(58, 48, 48);
+    border-bottom: 1px solid white;
+    & ul{
+        display: flex;
+        list-style: none;
+        gap: 1rem;
+        color: white;
+        font-weight: bolder;
+        & li{
+            cursor: pointer;
+            & a{
+                text-decoration: none;
+                color: white;
+            }
+        }
+        & li:hover a{
+           color: wheat;
+        }
+    }
+    & img{
+        width: 80px;
+        height: 40px;
+        font-size: 20px;
+        color: blue;
+    }
+}
+.content{
+    width: 100%;
+    justify-items: center;
+    min-height: 70%;
+    background: linear-gradient(transparent,white);
+    height: fit-content;
+    & .post{
+        width: 95%;
+        /* background-color: rgb(63, 62, 62); */
+        background-color: white;
+        color: black;
+        border-radius: 10px;
+        /* border: 0.5px solid rgb(184, 180, 180); */
+        border: 1px solid white;
+        transition: 1s;
+        cursor: pointer;
+        justify-items: center;
+        
+        & div{
+            align-items: center;
+            width: 98%;
+            justify-items: center;
+            cursor: pointer;
+            height: 30px;
+            /* background-color: white; */
+            /* color: black; */
+            border-bottom: 1px solid black;
+           
+            & h2{
+                text-transform: uppercase;
+            }
+        }
+        & p{
+            font-size: 15px;
+            margin-left: 8px;
+            font-family: cambria;
+        }
+    }
+}
+.footer{
+    font-family: calibri;
+    justify-items: center;
+    width: 100%;
+    background-color: black;
+    height: 100px;
+    color: white;
+    
+}
+.crypto{
+    width: 97%;
+    gap: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    & div{
+        width: 100%;
+        /* background: rgb(82, 69, 69); */
+        background-color: rgb(31, 30, 29);
+        color: white;
+        border-radius: 10px;
+        align-items: center;
+        border: 0.5px solid white;
+        outline: 2px solid rgb(31, 30, 29);
+
+        & h3{
+            text-transform: uppercase;
+            margin-left: 10px;
+	    font-family: calibri;
+        }
+        & label{
+            margin-left: 10px;
+            
+            font-family: calibri;
+            
+        }
+        & button{
+            margin-left: 10px;
+            align-items: center;
+            height: 30px;
+            width: 95%;
+            text-transform: uppercase;
+            color: rgb(58, 48, 48);
+            font-weight: 800;
+            background-color: white;
+            border-radius: 40px;
+            border: 2px solid white;
+            cursor: pointer;
+            transition: 1s;
+            &:hover{
+                background-color: rgb(7, 211, 7);
+                border: 2px solid rgb(7, 211, 7);
+                color: white;
+                font-weight: bolder;
+            }
+        }
+        & div{
+            border: 0;
+            outline: 0;
+            display: flex;
+            gap: 0.5rem;
+        }
+        
+    }
+}
+.crypto-head{
+    width: 98%;
+    
+    justify-items: center;
+    font-weight: bolder;
+    border-bottom: 1px solid white;
+    font-family: times new roman;
+    color: white;
+}
+.nav-crypto{
+    gap: 20px;
+    & .prev{
+        align-items: center;
+        font-size: 25px;
+        height: 50px;
+        width: 40px;
+        background-color: brown;
+        color: white;
+        font-weight: bolder;
+        border: 0;
+        border-radius: 10px;
+        transition: 0.5s;
+        cursor: pointer;
+        &:hover{
+            background-color: red;
+            box-shadow: 0 0 1rem red;
+            transform: scale(1.1);
+        }
+    }
+    & .nex{
+        align-items: center;
+        font-size: 25px;
+        height: 50px;
+        width: 40px;
+        background-color: green;
+        color: white;
+        font-weight: bolder;
+        border: 0;
+        cursor: pointer;
+        transition: 0.5s;
+        border-radius: 10px;
+        &:hover{
+            background-color: greenyellow;
+            box-shadow: 0 0 1rem greenyellow;
+            border: 1px solid black;
+            color: black;
+            transform: scale(1.1);
+        }
+    }
+    
+}
+.crypto-analysis{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2rem;
+    & div{
+        background-color: white;
+        align-items: center;
+        gap: 1rem;
+        width: 30vw;
+        height: fit-content;
+        justify-items: center;
+        & h3{
+            text-transform: uppercase;
+        }
+        & iframe{
+           
+            width: 30vw;
+            height: 50vh;
+        }
+    }
+}
+.crypto-news{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin-left: 4px;
+    gap: 2rem;
+    
+    & div{
+        background-color: white;
+        justify-items: center;
+        border-radius: 10px;
+        box-shadow: 0 0 1rem white;
+        border-bottom: 4px solid black;
+        & div{
+            border-bottom: none;
+            
+            align-items: center;
+        }
+        & h3{
+            text-transform: uppercase;
+            font-weight: 900;
+        }
+        & a{
+            text-decoration: none;
+            color: black;
+            font-weight: 800;
+        }
+        & p{
+            margin-left: 4px;
+            font-family: cambria;
+            & span{
+                font-weight: bold;
+                text-transform: capitalize;
+            }
+        }
+    }
+}
+.about-us{
+    background-color: white;
+    box-shadow: 0 0 1rem white;
+    justify-items: center;
+    
+    & p{
+        margin-left: 10px;
+    }
+    & div{
+        width: 50vw;
+        & input{
+           width: 100%;
+            justify-content: center;
+            font-size: 18px;
+            border: 2px solid black;
+        }
+        & label{
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        & textarea{
+            width: 100%;
+            border: 2px solid black;
+        }
+        & h2{
+            text-transform: uppercase;
+        }
+        & button{
+            width: 100%;
+            height: 30px;
+            align-items: center;
+            background-color: green;
+            box-shadow: 0 0 1rem green;
+            border: none;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    }
+}
+.menu-icon{
+    display: none;
+}
+.small-screen{
+    display: none;
+}
+.view{
+    display: none;
+}

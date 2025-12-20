@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% block content %}
+{% if not post %}
+
+{% else %}
+{% for post in post %}
+<div class="post">
+    <div><h2>{{ post.title }}</h2></div>
+
+    <p>{{ post.discription }}</p>
+
+</div><br>
+{% endfor %}
+{% endif %}
+<div class="crypto-head">
+    <h3>TOP CRYPTOS</h3>
+</div><br>
+{% if not cryptos %}
+
+{% else %}
+<div class="crypto">
+{% for crypto in cryptos %}
+<div>
+    <div style="display: grid;grid-template-columns: repeat(1,1fr);">
+        <h3>{{ crypto.name }}({{ crypto.symbol }})</h3>
+        <label>Price: ${{ crypto.current_price }}</label>
+        <label>24h Change: {{ crypto.price_change_percentage_24h }}%</label>
+        <label>Market Cap: ${{ crypto.market_cap }}</label>
+         {% if crypto.is_up %}
+            <label style="color:green;">▲ Up {{ crypto.price_change }} ({{ crypto.price_change_percent }}%)</label>
+        {% elif crypto.is_down %}
+            <label style="color:red;">▼ Down {{ crypto.price_change }} ({{ crypto.price_change_percent }}%)</label>
+        {% else %}
+            <label>No change</label>
+        {% endif %}
+    </div><br>
+  <a href="{% url 'buy_crypto' crypto.id|default:crypto.id %}"  target="_blank"><button>Buy</button></a><br><br>
+</div>
+{% endfor %}
+</div>
+{% endif %}
+<br><br>
+<div class="View">
+    <a href="{% url 'cryptos' %}"><button>View all cryptos</button></a> 
+</div>
+<br>
+{% endblock %}

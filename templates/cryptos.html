@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="crypto-head">
+    <h3>ALL CRYPTOS</h3>
+</div><br>
+{% if not cryptos %}
+
+{% else %}
+<div class="crypto">
+{% for crypto in cryptos %}
+<div>
+    <div style="display: grid;grid-template-columns: repeat(1,1fr);">
+        <h3>{{ crypto.name }}({{ crypto.symbol }})</h3>
+        <label>Market Cap: ${{ crypto.market_cap }}</label>
+        <label>Price: ${{ crypto.current_price }}</label>
+         {% if crypto.is_up %}
+            <label style="color:green;">▲ Up {{ crypto.price_change }} ({{ crypto.price_change_percent }}%)</label>
+        {% elif crypto.is_down %}
+            <label style="color:red;">▼ Down {{ crypto.price_change }} ({{ crypto.price_change_percent }}%)</label>
+        {% else %}
+            <label>No change</label>
+        {% endif %}
+    </div><br>
+  <a href="{% url 'buy_crypto' crypto.id|default:crypto.id %}"  target="_blank"><button>Buy</button></a><br><br>
+</div>
+{% endfor %}
+</div><br>
+<div class="nav-crypto">
+  {% if cryptos.has_previous %}
+    <button class="prev">   <a href="?page={{ cryptos.previous_page_number }}" style="text-decoration: none;color:white;"> < </a></button>
+    {% endif %}
+    &nbsp;&nbsp;
+    {% if cryptos.has_next %}
+    <button class="nex"> <a href="?page={{ cryptos.next_page_number }}" style="text-decoration: none;color:white;"> > </a></button>
+   {% endif %}
+</div><br>
+{% endif %}
+<br><br>
+<br>
+<div class="View">
+    <a href="{% url 'analysis' %}"><button>View Crypto Analysis</button></a> 
+</div>
+<br>
+{% endblock %}

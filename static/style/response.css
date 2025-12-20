@@ -1,0 +1,109 @@
+@media screen and (max-width: 980px){
+    .menu-icon{
+        display: block;
+        
+    }
+    .menu img{
+        width: 50px;
+        height: 40px;
+    }
+    .menu ul{
+        display: none;
+    }
+    .crypto{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        & div{
+            background-color: white;
+            color: black;
+            border: none;
+            outline: none;
+            border-bottom: 2px solid gray;
+            box-shadow: 0 0 1rem white;
+            
+            height: fit-content;
+	    
+            & button{
+                background-color: green;
+                color: white;
+                width: 95%;
+                height: 35px;
+            }
+            & label{
+                font-weight: bold;
+		
+            }
+            
+        }
+    }
+    .crypto-analysis{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        & div{
+            width: 95vw;
+            & iframe{
+                width: 100%;
+            }
+        }
+    }
+    .crypto-news{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        & div{
+            border-bottom: 2px solid gray;
+        }
+    }
+    .about-us{
+        & div{
+            width: 90%;
+            & input{
+                border: 1px solid black;
+            }
+            & textarea{
+                border: 1px solid black;
+            }
+        }
+    }
+    .small-screen{
+        position: fixed;
+        background-color: white;
+        width: 100%;
+        border-bottom: 1px solid black;
+        display: block;
+        & img{
+            width: 50px;
+            height: 40px;
+            margin-left: 88%;
+        }
+        & ul{
+            list-style: none;
+            & a{
+                text-decoration: none;
+                color: black;
+                font-weight: bold;
+                font-family: calibri;
+            }
+        }
+    }
+    .post{
+        width: 100vw;
+    }
+    .view{
+        display: block;
+        & button{
+            width: 90vw;
+            background-color: green;
+            align-items: center;
+            border: none;
+            color: white;
+            text-transform: uppercase;
+            font-family: calibri;
+            font-weight: bold;
+            box-shadow: 0 0 1rem green;
+            height: 30px;
+        }
+    }
+    .content{
+    height: fit-content;
+    }
+}
