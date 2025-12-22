@@ -26,7 +26,11 @@ SECRET_KEY = 'django-insecure-%4_$_-&65x#f4k$+yrqz_aaurl+0(c9t8dbb03u9h+!t1+gr8(
 DEBUG = False 
 
 ALLOWED_HOSTS = ['*']
-
+ALLOWED_HOSTS = [
+    'mastercryptoo.com',
+    'www.mastercryptoo.com',
+    'your-project-name.up.railway.app'
+]
 
 # Application definition
 
