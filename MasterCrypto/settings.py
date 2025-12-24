@@ -27,9 +27,10 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 ALLOWED_HOSTS = [
-    'mastercryptoo.com',
+    '5ql0lxxz.up.railway.app',
+    '.railway.app',
     'www.mastercryptoo.com',
-    'your-project-name.up.railway.app'
+    'mastercryptoo.com',
 ]
 
 # Application definition
