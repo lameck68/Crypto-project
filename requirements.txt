@@ -1,5 +1,3 @@
-django
+Django
 gunicorn
-requests
 whitenoise
-psycopg2-binary
