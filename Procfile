@@ -1,1 +1,1 @@
-web: gunicorn MasterCrypto.wsgi
+web: gunicorn MasterCrypto.wsgi --log-file -
