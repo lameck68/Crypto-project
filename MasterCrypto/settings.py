@@ -26,9 +26,9 @@ SECRET_KEY = 'django-insecure-%4_$_-&65x#f4k$+yrqz_aaurl+0(c9t8dbb03u9h+!t1+gr8(
 DEBUG = False 
 
 ALLOWED_HOSTS = [
-    'mastercryptoo.up.railway.app',   # Railway app domain yako
-    'mastercryptoo.com',               # domain yako ya custom
-    'www.mastercryptoo.com',           # www version
+    'mastercryptoo.up.railway.app',
+    'mastercryptoo.com',
+    'www.mastercryptoo.com',
 ]
 
 # Application definition
@@ -45,9 +45,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-
     'whitenoise.middleware.WhiteNoiseMiddleware',
-
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -122,8 +120,12 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
-STATIC_URL = 'static/'
-STATICFILES_DIRS = [ BASE_DIR / "static" ]
+STATIC_URL = '/static/'
+
+STATICFILES_DIRS = [
+    BASE_DIR / "static"
+]
+
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
